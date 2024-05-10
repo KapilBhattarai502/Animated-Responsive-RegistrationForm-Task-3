@@ -10,49 +10,16 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/clientsidevalidation.js" />
-    <style>
-      .container {
-        margin-top: 30px;
-        padding-bottom: 20px;
-        background-color: aqua;
-        
-      }
-      .middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container {
-  margin-top: 30px;
-  padding-bottom: 20px;
-  background-color: aqua;
-  border-radius: 10px; /* Adjust the border radius as needed */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties as needed */
-  animation-name: slideInDown;
-  animation-duration: 1s;
-}
-
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-
-
-     
-      
-    </style>
+    <link rel="stylesheet" href="/style.css">
+   
   </head>
   <body>
+    <div class="alert alert-success alert-dismissible fade show alertment" role="alert">
+      <strong>Welcome To Cognifyz!</strong> Please fill in the form below.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="container">
+      
       <form
         class="row g-3 needs-validation"
         action="/submit"
