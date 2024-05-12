@@ -10,16 +10,23 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style.css">
-   
+    <link rel="stylesheet" href="/style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="alert alert-success alert-dismissible fade show alertment" role="alert">
+    <div
+      class="alert alert-success alert-dismissible fade show alertment"
+      role="alert"
+    >
       <strong>Welcome To Cognifyz!</strong> Please fill in the form below.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
     </div>
     <div class="container">
-      
       <form
         class="row g-3 needs-validation"
         action="/submit"
@@ -27,7 +34,7 @@
         novalidate
       >
         <div class="col-md-4">
-          <span for="validationCustom01" class="form-label">First Name:</label>
+          <label for="validationCustom01" class="form-label">First Name:</label>
           <input
             type="text"
             name="FirstName"
@@ -35,7 +42,7 @@
             id="validationCustom01"
             required
           />
-       
+
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-4">
@@ -50,7 +57,9 @@
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Email:</label>
+          <label for="validationCustomUsername" class="form-label"
+            >Email:</label
+          >
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
             <input
@@ -103,37 +112,44 @@
           <div class="valid-feedback">Looks good!</div>
         </div>
 
-        <div class="col-md-6">
-          <label for="validationCustom06" class="form-label">City:</label>
-          <input
-            type="text"
-            name="City"
-            class="form-control"
+        <div class="col-md-4">
+          <label for="validationCustom06" class="form-label">Country:</label>
+          <select
+            onchange="getCities(this.value)"
+            name="Country"
+            class="form-select"
             id="validationCustom06"
             required
-          />
-          <div class="invalid-feedback">Please provide a valid city.</div>
+          >
+            <option value="">Choose a Country</option>
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="Dubai">Dubai</option>
+            <option value="England">England</option>
+          </select>
+
+          <div class="invalid-feedback">Please provide a valid country.</div>
         </div>
-        <div class="col-md-3">
-          <label for="validationCustom07" class="form-label">State:</label>
+        <div class="col-md-4">
+          <label for="validationCustom07" class="form-label">City:</label>
           <select
+            onchange="getCity(this.value)"
+            name="cities"
+            id="cities"
+            disabled
             class="form-select"
-            name="State"
+            name="City"
             id="validationCustom07"
             required
           >
-            
-            <option>Koshi-Province 1</option>
-            <option>Madhesh-Province 2</option>
-            <option>Bagmati-Province 3</option>
-            <option>Gandaki-Province 4</option>
-            <option>Lumbini-Province 5</option>
-            <option>Karnali-Province 6</option>
-            <option>Sudurpaschim-Province 7</option>
+            <option>Choose a City</option>
           </select>
           <div class="invalid-feedback">Please select a valid state.</div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label for="validationCustom08" class="form-label">Zip:</label>
           <input
             type="text"
@@ -171,34 +187,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-     (() => {
-    "use strict";
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll(".needs-validation");
-
-    // Loop over them and prevent submission
-    Array.from(forms).forEach((form) => {
-        form.addEventListener(
-            "submit",
-            (event) => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    // Form is valid, so you can perform routing here
-                    // For example, you can redirect to /submit
-                    window.location.href = "/submit"; // Redirect to /submit
-                }
-
-                form.classList.add("was-validated");
-            },
-            false
-        );
-    });
-})();
-
-    </script>
   </body>
 </html>
