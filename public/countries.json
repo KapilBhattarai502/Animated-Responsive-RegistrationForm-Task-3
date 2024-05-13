@@ -2,5 +2,11 @@
     "England":["London","Nottingham","Bristol","Liverpool"],
     "France":["Paris","Lyon","Marseille","Nantes"],
     "Spain":["Madrid","Barcelona","Bilbao","Seville"],
-    "Germany":["Berlin","Frankfrut","Cologne","Gladbach"]
+    "Germany":["Berlin","Frankfrut","Cologne","Gladbach"],
+    "Nepal":["Kathmandu","Chitwan","Bhaktapur","Bharatpur","Hetauda","Jumla"],
+    "India":["Kolkota","Mumbai","Delhi","Banglore","Hydrabad","Lucknow"],
+    "USA":["NewYork","Los Angles","Austin","San Fransicsco","Dallas"],
+    "Australia":["Canbera","Perth","Sydney","Melbourne","Brisbane","Adelaide"],
+    "Canada":["Vancouver","Tornoto","Calgary","saskatoon","ottawa"],
+    "Dubai":["AbuDhabi","Sharjah","Umm Al Qaiwain","Fujairah","Ajman","Ras Al Khaimah"]
 }
