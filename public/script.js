@@ -56,3 +56,30 @@ function getCities(country){
 
  
 }
+//Homepage script
+
+{/* <script> */}
+      let button = document.getElementById("Btn");
+      let lightImg = document.querySelector(".light");
+      let cognifyLogo=document.querySelector(".cognifyLogo");
+
+      function toggleBtn() {
+        button.classList.toggle("active");
+        button.childNodes[1].classList.toggle("rightallign");
+
+
+        if (lightImg.style.opacity == 0) {
+          lightImg.style.opacity = "1";
+          cognifyLogo.style.opacity="1"
+          return false;
+        }
+        if (lightImg.style.opacity == 1) {
+          lightImg.style.opacity = "0";
+          cognifyLogo.style.opacity="0"
+          return false;
+        }
+
+
+       
+      }
+    {/* </script> */}
